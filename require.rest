@@ -1,0 +1,57 @@
+GET http://localhost:3030/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJuYW1lIjoiTHVpcyBKYXZpZXJzIiwiZW1haWwiOiJsdWlzamF2aWVybXR6YjJAZ21haWwuY29tIiwiaWF0IjoxNjUzMzQyNjgyLCJleHAiOjE2NTMzNDI3MDJ9.xs-YEhzsh98__HAMxulRrg5YMJy0nnm7L26JoA-6BlE
+###
+POST http://localhost:3030/users
+Content-Type: application/json
+
+{
+    "name": "Rene Alberto",
+    "email": "reneprueba@gmail.com",
+    "password": "123456",
+    "confPassword": "123456"
+}
+
+###
+POST http://localhost:3030/login
+Content-Type: application/json
+
+{
+    "email": "luisjaviermtzb@gmail.com",
+    "password": "123456"
+}
+
+###
+GET http://localhost:3030/token
+
+###
+DELETE http://localhost:3030/logoute
+
+###
+
+GET  http://localhost:3030/reservas/
+
+###
+
+POST  http://localhost:3030/reservas
+Content-Type: application/json
+
+{
+    "fechahora": "12:40",
+    "nombre": "Luis Martinez",
+    "sucursal_reservas": "Ibero",
+    "telefono": "8712194723",
+    "fecha": "29/05/2022"
+}
+
+###
+PATCH   http://localhost:3030/reservas/487
+Content-Type: application/json
+
+{
+    "fechahora": "12:50",
+    "nombre": "Javier",
+    "sucursal_reservas": "Ibero",
+    "telefono": "8712194723"
+
+
+}
